@@ -13,14 +13,6 @@ var TABLE_ELEMENT_SELECTOR = '.article-table>tbody>tr>td>a[title]';
 var BASE_URL = "http://divinity.wikia.com";
 var BOX_SELECTOR = ".infobox";
 
-var mouseX;
-var mouseY;
-
-$(document).mousemove( function(e) {
-   mouseX = e.pageX; 
-   mouseY = e.pageY;
-});
-
 function addHoverBox(page, elem) {
     $.get(page, function(data) {
         var box = $(BOX_SELECTOR, data);
